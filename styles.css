@@ -8,6 +8,9 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
 }
 
 body {
@@ -20,4 +23,183 @@ body {
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
+}
+
+header.container{
+    max-width: 94rem;
+    padding: 0 2rem;
+    margin: 3rem auto;
+}
+ .profile{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 3rem;
+    align-items: center;
+}
+.profile-image{
+    grid-row: 1 / -1;
+}
+
+
+.profile-user-settings {
+    display:flex ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-user-name{
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+.profile-edit-btn{
+    line height: 1.8rem;
+    border: 1px solid gray;
+    padding:0 2.4rem;
+    font-size: 1.4rem;
+    border-radius: 0.3rem;
+    margin-left: 2rem;
+}
+
+.profile-stats{
+    display: flex;
+    margin-top:2rem;
+}
+
+.profile-stats ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.profile-stats li{
+    margin-right: 4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.profile-bio{
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+.profile-real-name,
+.profile-stat-count,
+.btn{
+    font-weight: bold;
+}
+.profile-real-name{
+    font-size: 1.8rem;
+}
+
+.btn{
+    display: inline-block;
+    color: inherit;
+    font: inherit;
+    background: none;
+    cursor: pointer;
+    text-transform: inherit;
+    padding: 0;
+}
+.btn:focus {
+    outline: 0;
+}
+.profile-settings-btn{
+    margin: left 1rem;
+    font-size: 2.4rem;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(29.5rem,1fr));
+    grid-gap: 2.8rem;
+    padding: 3rem;
+}
+
+
+.gallery-item{
+    position: relative;
+}
+
+.gallery-item img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery-item-type,
+.gallery-item-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000004d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover .gallery-item-type
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
+.gallery-item-info ul{
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+.gallery-item-info li{
+    font-size: 1.8rem;
+}
+.visually-hidden {
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.gallery-item-likes,
+.gallery-item-comments{
+    display: flex;
+    align-items: center;
+}
+
+.gallery-item-likes i,
+.gallery-item-comments i {
+    margin-right: 5px;
+}
+
+.gallery-item-type{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000000b3;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+.loader{
+    border: 8px solid whitesmoke ;
+    border-top: 8px solid skyblue;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+
+}
+
+    }
 }
